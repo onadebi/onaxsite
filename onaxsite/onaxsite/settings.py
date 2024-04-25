@@ -26,7 +26,7 @@ SECRET_KEY = config('DJANGO_SECRET')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DJANGO_DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.onaxsys.com']
 
 
 # Application definition
@@ -78,12 +78,20 @@ WSGI_APPLICATION = 'onaxsite.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
+     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # },
+    # 'default':{
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': config('DJANGO_DB_NAME'), # database name
+    #     'USER': config('DJANGO_DB_USER'),
+    #     'PASSWORD': config('DJANGO_DB_PASSWORD'),
+    #     'HOST': config('DJANGO_DB_HOST'),
+    #     'PORT': config('DJANGO_DB_PORT'), 
+    # }
     'default':{
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': config('DJANGO_DB_NAME'), # database name
         'USER': config('DJANGO_DB_USER'),
         'PASSWORD': config('DJANGO_DB_PASSWORD'),
