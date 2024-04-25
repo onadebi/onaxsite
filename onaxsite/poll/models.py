@@ -19,5 +19,5 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
 
     def __str__(self) -> str:
-        return f"[{self.id}]-{self.choice_text} - {self.votes} votes"
+        return f"[{self.id}]-{self.choice_text} - {self.votes} votes > from Question: {self.question}"
     

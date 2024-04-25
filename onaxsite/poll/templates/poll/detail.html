@@ -1,8 +1,33 @@
-<h1>{{ question.question_text }}</h1>
-<ul>
-{% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }}</li>
-{% endfor %}
-</ul>
-<br/>
-<button onclick="javascript:history.go(-1)">Back</button>
+<style>
+    .btnGrayed{
+        border:none;
+        padding: 5px 15px;
+        background-color: gray; 
+        border-radius: 4px; color:white;
+        cursor: pointer;
+    }
+</style>
+
+<form action="{% url 'poll:vote' question.id %}" method="post">
+    {% csrf_token %}
+    <fieldset style="border-width:1px 0 0 0; border-color:cornflowerblue;">
+        
+        <legend><h1>{{ question.question_text }}</h1></legend>
+        {% if error_message %}<p style="color:red; font-style: italic; background-color: rgba(255,0,0,0.2);padding: 5px; border-radius:4px;"><strong>{{ error_message }}</strong></p>{% endif %}
+        {% for choice in question.choice_set.all %}
+        <input type="radio" name="choice" id="choice_{{forloop.counter}}" value="{{choice.id}}">
+        <label for="choice_{{ forloop.counter }}">{{choice.choice_text}}</label><br>
+        {% endfor %}
+    </fieldset>
+    <br/>
+    <div style="display: flex; justify-content: center;">
+        <button type="reset" style="border:1px solid #ececec;border-radius: 4px;">Reset</button>&nbsp;
+        <input style="border:none;padding: 15px;background-color: cornflowerblue; border-radius: 4px; color:white; cursor: pointer;" type="submit" value="Vote">
+
+    </div>
+</form>
+
+<div style="text-align: center;">    
+    <button class="btnGrayed" onclick="javascript:history.go(-1)"> < Back</button>
+    <button class="btnGrayed" onclick="javascript:window.location.href='/poll'" >Home </button>
+</div>
