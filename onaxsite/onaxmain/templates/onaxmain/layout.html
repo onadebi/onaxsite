@@ -1,11 +1,29 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title || 'Onadebi Media'}}</title>
-</head>
-<body>
-        
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if title%} {{title}} {% else %} {{'Onaxsys Media'}} {% endif %}</title>
+    <link rel="stylesheet" href="{% static 'styles/onaxmain/main.css' %}" />
+    <link rel="icon" href="{% static 'media/onaxmain/favicon.ico' %}" />
+    <meta name="description" content="{% if description %}{{ description }}{%else%}{{'Trust us'}}{%endif%}"/> 
+    <meta name="keywords" content="{% if keywords %} {{keywords }} {%endif%}"/>
+  </head>
+  <body>
+    <div>
+      <nav>
+        <ul>
+          <li><a href="{% url 'onaxmain:index' %}">Home</a></li>
+          <li><a href="{% url 'onaxmain:about' %}">About</a></li>
+          <li><a href="{% url 'onaxmain:portfolioz' %}">Portfolio</a></li>
+        </ul>
+      </nav>
+    </div>
+    {% block body %} {% endblock %} 
+    <footer>
+      <p>&copy; {% now "Y" %} Onaxsys Media</p>
+    </footer>
+    {%block scripts %} {% endblock %}
+  </body>
 </html>
