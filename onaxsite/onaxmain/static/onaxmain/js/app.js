@@ -46,7 +46,7 @@ const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 
 const headerActive = function () {
-  if (window.scrollY > 80) {
+  if (window.scrollY > 10) {
     header.classList.add("active");
     backTopBtn.classList.add("active");
   } else {

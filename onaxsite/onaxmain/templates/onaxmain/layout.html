@@ -16,7 +16,7 @@
 
   </head>
   <body id="top">
-    <header class="header active" data-reader>
+    <header class="header" data-header>
       <div class="container">
         <a href="{% url 'onaxmain:index' %}" class="logo">Onaxsys</a>
         <nav class="navbar" data-navbar>
@@ -68,7 +68,6 @@
             <p class="footer-list-title">About Onaxsys</p>
   
             <p class="footer-text">
-              A new way to make the payments easy, reliable and 100% secure. claritatem itamconse quat. Exerci tationulla.
               Expert web design and application development agency crafting innovative digital solutions. We help you bring your projects to life with top-quality and cost-effective strategies and  technology tools.
             </p>
   
@@ -281,6 +280,10 @@
         </div>  
       </div>
     </footer>
+    <!-- #BACK TO TOP-->
+    <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+      <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+    </a>
     <script>
       window.onload=()=>{
         document.querySelector('#webyear').innerText += new Date().getFullYear();
