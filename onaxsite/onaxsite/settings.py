@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    "whitenoise.runserver_nostatic" if DEBUG == False else 'django.contrib.staticfiles',
+    "whitenoise.runserver_nostatic",
+    'django.contrib.staticfiles',
 ]
 
 MIDDLEWARE = [
