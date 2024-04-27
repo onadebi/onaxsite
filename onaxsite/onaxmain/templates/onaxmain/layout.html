@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% if title%} {{title}} {% else %} {{'Onaxsys Media'}} {% endif %}</title>
+    <title>{% if title%} {{title}} {% else %} {{'Onaxsys Solutions Ltd.'}} {% endif %}</title>
     <link rel="stylesheet" href="{% static 'onaxmain/styles/layout.css' %}" />
     <link rel="icon" href="{% static 'onaxmain/media/favicon.ico' %}" />
     <meta name="description" content="{% if description %}{{ description }}{%else%}
@@ -13,11 +13,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    {% block pagestyle%} {% endblock %}
 
   </head>
   <body id="top">
     <header class="header" data-header>
-      <div class="container">
+      <div class="header-container">
         <a href="{% url 'onaxmain:index' %}" class="logo">Onaxsys</a>
         <nav class="navbar" data-navbar>
 
@@ -30,14 +31,14 @@
 
           <ul class="navbar-list">
             <li class="navbar-item">
-              <a href="{% url 'onaxmain:index' %}" class="navbar-link" data-nav-link>Home</a>
+              <a href="{% url 'onaxmain:index' %}#home" class="navbar-link" data-nav-link>Home</a>
             </li>
   
             <li class="navbar-item">
               <a href="{% url 'onaxmain:index' %}#service" class="navbar-link" data-nav-link>Services</a>
             </li>  
             <li class="navbar-item">
-              <a href="{% url 'onaxmain:index' %}#feature" class="navbar-link" data-nav-link>Features</a>
+              <a href="{% url 'onaxmain:index' %}#feature" class="navbar-link" data-nav-link>Our process</a>
             </li>  
             <li class="navbar-item">
               <a href="{% url 'onaxmain:index' %}#project" class="navbar-link" data-nav-link>Portfolio</a>

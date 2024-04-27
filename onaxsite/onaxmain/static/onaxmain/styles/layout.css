@@ -162,8 +162,8 @@ body {
   #REUSED STYLE
 \*-----------------------------------*/
 
-.container { padding-inline: 15px; }
-
+.container, .header-container { padding-inline: 15px; }
+.container { max-width: 1140px; margin:auto; }
 .section { padding-block: var(--section-padding); }
 
 .h1,
@@ -336,7 +336,7 @@ body {
     box-shadow: var(--shadow-1);
   }
 
-  .header .container{
+  .header .header-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -416,7 +416,7 @@ body {
   #DIV MAIN
 \*-----------------------------------*/
 .main{
-  margin-top:100px;
+  /* margin-top:100px; */
 }
 
 /*-----------------------------------*\
@@ -588,30 +588,6 @@ body {
   .header .btn::after { background-color: var(--raisin-black-1); }
 
   .header .btn:is(:hover, :focus) { color: var(--white); }
-
-
-
-  /**
-   * HERO
-   */
-
-  .hero {
-    background-image: linear-gradient(to right, var(--white) 79%, var(--mustard) 79%);
-    overflow: hidden;
-  }
-
-  .hero .container {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-
-  .hero .wrapper { flex-wrap: nowrap; }
-
-  .hero .btn,
-  .hero-btn .span { flex-shrink: 0; }
-
-  .hero-banner { margin-inline-end: -140px; }
-
 
 
   /**

@@ -1,5 +1,221 @@
-{% extends 'layout.html' %} {% block body %}
+{% extends 'layout.html' %} 
+{% load static %}
+{% block pagestyle %}
+<link rel="stylesheet" href="{% static 'onaxmain/styles/home.css'%}">
+{% endblock %} 
 
-    <h3>Building Digital Solutions, Brand and Experiences</h3>
+{% block body %}
+<article>
+    <!--#HERO-->
+    <section class="section hero" id="home" aria-label="hero">
+        <div class="container">
 
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">
+              Crafting cutting-edge software <span class="has-before">Solutions</span>, to meet your project needs.
+            </h1>
+
+            <p class="hero-text">
+              At Onaxsys, we are committed to providing you with the best software solutions that match up with your budget and would help you grow your  projects or business needs.
+            </p>
+
+            <div class="wrapper">
+              <a href="#" class="btn btn-primary has-before has-after">How It Works</a>
+
+              <button class="hero-btn" aria-label="pixology promo">
+                <span class="span">Contact Us</span>
+              </button>
+            </div>
+
+            <ul class="social-list">
+
+              <li>
+                <a href="#" class="social-link" style="--color: hsl(241, 77%, 63%);">
+                  <span class="span">Facebook</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" style="--color: hsl(0, 100%, 50%);">
+                  <span class="span">Youtube</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" style="--color: hsl(203, 89%, 53%);">
+                  <span class="span">Twitter</span>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <figure class="hero-banner">
+            <img src="{% static 'onaxmain/media/images/hero-banner.png'%}" width="794" height="637" alt="hero banner" class="w-100">
+          </figure>
+
+        </div>
+    </section>
+
+    <!--#SERVICE-->
+    <section class="section service" id="service" aria-label="service">
+        <div class="container">
+
+            <p class="section-subtitle has-before text-center">Our Services</p>
+
+            <h2 class="h2 section-title text-center">Managing you business with our <span class="has-before">expert
+                services</span></h2>
+
+            <ul class="grid-list">        
+
+                <li>
+                    <div class="service-card" style="--color: 267, 76%, 57%">
+
+                    <div class="card-icon">
+                        <img src="{% static 'onaxmain/media/images/service-icon-2.png' %}" width="30" height="30" loading="lazy"
+                        alt="service icon">
+                    </div>
+
+                    <h3 class="h3">
+                        <a href="#" class="card-title">Web & Mobile Development</a>
+                    </h3>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="service-card" style="--color: 17, 100%, 68%">
+
+                    <div class="card-icon">
+                        <img src="{% static 'onaxmain/media/images/service-icon-3.png' %}" width="30" height="30" loading="lazy"
+                        alt="service icon">
+                    </div>
+
+                    <h3 class="h3">
+                        <a href="#" class="card-title">Sotware Applications Technical Support</a>
+                    </h3>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="service-card" style="--color: 174, 77%, 50%">
+
+                    <div class="card-icon">
+                        <img src="{% static 'onaxmain/media/images/cloud-wireless-icon.svg' %}" width="30" height="30" loading="lazy" style="color:cornflowerblue" alt="service icon">
+                    </div>
+
+                    <h3 class="h3">
+                        <a href="#" class="card-title">Cloud Migration and Management</a>
+                    </h3>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="service-card" style="--color: 52, 98%, 50%">
+
+                    <div class="card-icon">
+                        <img src="{% static 'onaxmain/media/images/service-icon-7.png' %}" width="30" height="30" loading="lazy"
+                        alt="service icon">
+                    </div>
+                    <h3 class="h3">
+                        <a href="#" class="card-title">IT and Software Consulting</a>
+                    </h3>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-card" style="--color: 210, 100%, 53%">
+
+                    <div class="card-icon">
+                        <img src="{% static 'onaxmain/media/images/service-icon-5.png' %}" width="30" height="30" loading="lazy"
+                        alt="service icon">
+                    </div>
+
+                    <h3 class="h3">
+                        <a href="#" class="card-title">Software testing and Quality Assurance</a>
+                    </h3>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="service-card" style="--color: 343, 98%, 60%">
+
+                    <div class="card-icon">
+                        <img src="{% static 'onaxmain/media/images/web-icon.svg' %}" width="30" height="30" loading="lazy"
+                        alt="service icon">
+                    </div>
+
+                    <h3 class="h3">
+                        <a href="#" class="card-title">Tasks Automation</a>
+                    </h3>
+
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+
+    
+      <!-- #FEATURE-->
+      <section class="section feature" id="feature" aria-label="feature">
+        <div class="container">
+
+            <p class="section-subtitle has-before text-center">Our Process</p>
+
+            <h2 class="h2 section-title text-center">High-level view of our systematic process.</h2>
+
+            <ul class="grid-list">
+                <li>
+                    <div class="service-card" style="--color: 267, 76%, 57%">
+
+                        <div style="display:flex; justify-content:center;">                           
+                            <div class="card-icon-static"><img src="{% static 'onaxmain/media/images/one.svg' %}" width="30" height="30" loading="lazy" alt="service icon"></div>
+                        </div>
+                        
+                        <h4 class="h4">
+                            <span class="card-title">You define the problem</span>
+                        </h4>
+                        <div>
+                            <span>You communicate to us the project you want to build or technical problem you would like solved.</span>
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="service-card" style="--color: 17, 100%, 68%">
+
+                        <div style="display:flex; justify-content:center;">
+                            <div class="card-icon-static"><img src="{% static 'onaxmain/media/images/two.svg' %}" width="30" height="30" loading="lazy" alt="service icon"></div>
+                        </div>
+                        
+                        <h4 class="h4">
+                            <span class="card-title">We develop a solution.</span>
+                        </h4>
+                        <div>
+                            <span>At this stage. we review the problem statement, and work with you to develop an MVP solution.</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-card" style="--color: 174, 77%, 50%">
+
+                        <div style="display:flex; justify-content:center;">
+                            <div class="card-icon-static"><img src="{% static 'onaxmain/media/images/three.svg' %}" width="30" height="30" loading="lazy" alt="service icon"></div>
+                        </div>
+                        
+                        <h4 class="h4">
+                            <span class="card-title">We Review, Refine and Launch!</span>
+                        </h4>
+                        <div>
+                            <span>Having built a working prototype, based on your satisfaction, we refine the solution and launch.</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div style="display:flex; justify-content:center; padding:10px 0px;"> <a href="#" class="btn btn-primary has-before has-after">Find out more!</a></div>
+        </div>
+      </section>
+
+    </article>
 {% endblock %}

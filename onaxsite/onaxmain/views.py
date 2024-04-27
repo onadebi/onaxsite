@@ -6,8 +6,7 @@ def index(request: HttpRequest):
     # http://127.0.0.1:8000/home/?name=onadebi
     # return HttpResponse(f"This site is currently under construction. {request.GET.get('name', 'No name provided')}")
     context: dict = {
-        'description': 'Trust us to bring your digital expectations to life.',
-        'title': 'Onaxsys Media',};
+        'description': 'Trust us to bring your digital expectations to life.',};
     return render(request, "onaxmain/index.html",context)
 
 def about(request: HttpRequest):
