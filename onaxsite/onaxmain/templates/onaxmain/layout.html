@@ -5,25 +5,294 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% if title%} {{title}} {% else %} {{'Onaxsys Media'}} {% endif %}</title>
-    <link rel="stylesheet" href="{% static 'styles/onaxmain/main.css' %}" />
-    <link rel="icon" href="{% static 'media/onaxmain/favicon.ico' %}" />
-    <meta name="description" content="{% if description %}{{ description }}{%else%}{{'Trust us'}}{%endif%}"/> 
-    <meta name="keywords" content="{% if keywords %} {{keywords }} {%endif%}"/>
+    <link rel="stylesheet" href="{% static 'onaxmain/styles/layout.css' %}" />
+    <link rel="icon" href="{% static 'onaxmain/media/favicon.ico' %}" />
+    <meta name="description" content="{% if description %}{{ description }}{%else%}
+    {{"Expert web design and development agency crafting innovative digital solutions. Elevate your online presence with our tailored strategies and cutting-edge technology."}}{%endif%}"/> 
+    <meta name="keywords" content="{% if keywords %} {{keywords}}{%else%}{{"Web design, web development, digital solutions,online presence,Digital marketing,mobile development,tailored strategies,cutting-edge technology."}}{%endif%}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
   </head>
-  <body>
-    <div>
-      <nav>
-        <ul>
-          <li><a href="{% url 'onaxmain:index' %}">Home</a></li>
-          <li><a href="{% url 'onaxmain:about' %}">About</a></li>
-          <li><a href="{% url 'onaxmain:portfolioz' %}">Portfolio</a></li>
-        </ul>
-      </nav>
+  <body id="top">
+    <header class="header active" data-reader>
+      <div class="container">
+        <a href="{% url 'onaxmain:index' %}" class="logo">Onaxsys</a>
+        <nav class="navbar" data-navbar>
+
+          <div class="wrapper">
+            <a href="{% url 'onaxmain:index' %}" class="logo">Onaxsys</a>  
+            <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+              <span name="close-outline" aria-hidden="true">x</span>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="{% url 'onaxmain:index' %}" class="navbar-link" data-nav-link>Home</a>
+            </li>
+  
+            <li class="navbar-item">
+              <a href="{% url 'onaxmain:index' %}#service" class="navbar-link" data-nav-link>Services</a>
+            </li>  
+            <li class="navbar-item">
+              <a href="{% url 'onaxmain:index' %}#feature" class="navbar-link" data-nav-link>Features</a>
+            </li>  
+            <li class="navbar-item">
+              <a href="{% url 'onaxmain:index' %}#project" class="navbar-link" data-nav-link>Portfolio</a>
+            </li>  
+            <li class="navbar-item">
+              <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span name="menu-outline" aria-hidden="true">&#9776;</span>
+        </button>  
+        <a href="{% url 'onaxmain:contact' %}" class="btn btn-primary has-before has-after">Let’s Talk 👋</a>  
+        <div class="overlay" data-nav-toggler data-overlay></div>
+      </div>
+    </header >
+
+    <div class="main">
+      {% block body %} {% endblock %}
     </div>
-    {% block body %} {% endblock %} 
-    <footer>
-      <p>&copy; {% now "Y" %} Onaxsys Media</p>
+    <footer class="footer">
+      <div class="container">
+  
+        <div class="footer-top section">
+  
+          <div class="footer-brand">
+  
+            <p class="footer-list-title">About Onaxsys</p>
+  
+            <p class="footer-text">
+              A new way to make the payments easy, reliable and 100% secure. claritatem itamconse quat. Exerci tationulla.
+              Expert web design and application development agency crafting innovative digital solutions. We help you bring your projects to life with top-quality and cost-effective strategies and  technology tools.
+            </p>
+  
+            <ul class="social-list">
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-youtube" role="img" class="md hydrated" aria-label="logo youtube"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-skype" role="img" class="md hydrated" aria-label="logo skype"></ion-icon>
+                </a>
+              </li>
+  
+            </ul>
+  
+          </div>
+  
+          <ul class="footer-list">
+  
+            <li>
+              <p class="footer-list-title">Usefull Links</p>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">Contact us</a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">How it Works</a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">Create</a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">Explore</a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">Terms &amp; Services</a>
+            </li>
+  
+          </ul>
+  
+          <ul class="footer-list">
+  
+            <li>
+              <p class="footer-list-title">Community</p>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">Help Center</a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">Partners</a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">Suggestions</a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">Blog</a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">Newsletters</a>
+            </li>
+  
+          </ul>
+  
+          <ul class="footer-list">
+  
+            <li>
+              <p class="footer-list-title">Instagram post</p>
+            </li>
+  
+            <li>
+              <ul class="insta-post">
+  
+                <li>
+                  <div class="insta-card">
+  
+                    <figure class="post-banner">
+                      <img src="{% static 'onaxmain/media/images/insta-post-1.jpg' %}" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
+                    </figure>
+  
+                    <a href="#" class="card-content">
+                      <ion-icon name="logo-instagram" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                    </a>
+  
+                  </div>
+                </li>
+  
+                <li>
+                  <div class="insta-card">
+  
+                    <figure class="post-banner">
+                      <img src="{% static 'onaxmain/media/images/insta-post-2.jpg' %}" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
+                    </figure>
+  
+                    <a href="#" class="card-content">
+                      <ion-icon name="logo-instagram" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                    </a>
+  
+                  </div>
+                </li>
+  
+                <li>
+                  <div class="insta-card">
+  
+                    <figure class="post-banner">
+                      <img src="{% static 'onaxmain/media/images/insta-post-3.jpg' %}" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
+                    </figure>
+  
+                    <a href="#" class="card-content">
+                      <ion-icon name="logo-instagram" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                    </a>
+  
+                  </div>
+                </li>
+  
+                <li>
+                  <div class="insta-card">
+  
+                    <figure class="post-banner">
+                      <img src="{% static 'onaxmain/media/images/insta-post-4.jpg' %}" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
+                    </figure>
+  
+                    <a href="#" class="card-content">
+                      <ion-icon name="logo-instagram" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                    </a>
+  
+                  </div>
+                </li>
+  
+                <li>
+                  <div class="insta-card">
+  
+                    <figure class="post-banner">
+                      <img src="{% static 'onaxmain/media/images/insta-post-5.jpg' %}" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
+                    </figure>
+  
+                    <a href="#" class="card-content">
+                      <ion-icon name="logo-instagram" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                    </a>
+  
+                  </div>
+                </li>
+  
+                <li>
+                  <div class="insta-card">
+  
+                    <figure class="post-banner">
+                      <img src="{% static 'onaxmain/media/images/insta-post-6.jpg' %}" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
+                    </figure>
+  
+                    <a href="#" class="card-content">
+                      <ion-icon name="logo-instagram" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+                    </a>
+  
+                  </div>
+                </li>
+  
+              </ul>
+            </li>
+  
+          </ul>
+  
+        </div>
+  
+        <div class="footer-bottom">  
+          <p class="copyright">
+            <i id="webyear" style="font-style: unset;">©&nbsp; </i> Onaxsys Media. All Rights Reserved.
+          </p>  
+          <ul class="footer-bottom-list">
+  
+            <li>
+              <a href="#" class="footer-bottom-link">Terms and conditions</a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-bottom-link">Privacy policy</a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-bottom-link">Login / Signup</a>
+            </li>
+  
+          </ul>
+  
+        </div>  
+      </div>
     </footer>
+    <script>
+      window.onload=()=>{
+        document.querySelector('#webyear').innerText += new Date().getFullYear();
+      };
+    </script>
+    <script src="{% static 'onaxmain/js/app.js' %}" defer></script>
+
+    <!-- 
+      - ionicon link
+    -->
+    {% comment %} <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> {% endcomment %}
     {%block scripts %} {% endblock %}
   </body>
 </html>
