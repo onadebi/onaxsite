@@ -3,6 +3,10 @@
 ##
 ## Get latest from `dotnet new gitignore`
 
+
+#Onadebi defined
+onaxsite/bin/
+onaxsite/staticfiles/
 # dotenv files
 .env
 
