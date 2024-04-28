@@ -1,0 +1,22 @@
+version: '3.7'
+
+networks:
+  onaxsys_network:  # Define a custom network
+    name: onaxsys_network  # Specify the custom network name
+
+services:
+  onaxsys_webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: onaxsys_webapp
+    container_name: onaxsyslocal
+    volumes:
+      - ./app:/usr/src/app
+    env_file:
+      - ./onaxsite/.env
+    ports:
+      - "8000:8000"
+    networks:
+      - onaxsys_network  # Assign the service to the custom network
+    # network_mode: "host"

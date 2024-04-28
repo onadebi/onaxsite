@@ -5,7 +5,7 @@ from django.utils import timezone;
 class Question(models.Model):
     """Question model for the Poll app"""
     question_text = models.CharField(max_length=200,null=False)
-    pub_date = models.DateTimeField('date published', default=datetime.now())
+    pub_date = models.DateTimeField('date published', default=timezone.now())
 
     def __str__(self) -> str:
         return f"[{self.id}]-{self.question_text}"
