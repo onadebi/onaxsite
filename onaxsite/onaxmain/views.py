@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpRequest;
+from django.http import JsonResponse
+from django.http import HttpResponse, HttpRequest, JsonResponse;
 
 # Create your views here.
 def index(request: HttpRequest):
@@ -20,3 +21,4 @@ def portfolio(request: HttpRequest):
 def contact(request: HttpRequest):
     context: dict=  {'title': 'Get in touch with us'};
     return render(request, "onaxmain/contact.html",context)
+

@@ -1,4 +1,26 @@
 {% extends 'layout.html' %}
+{% load static %}
+{% block pagestyle %}
+<link rel="stylesheet" href="{% static 'onaxmain/styles/home.css'%}">
+{% endblock %}
 {% block body %}
-
+    <div class="container dvContact">
+        <h1 style="text-align:center;">Contact Us</h1>
+        <div class="dvContactWrapper">
+            <div class='imgContainer'>
+                    <img src="{% static 'onaxmain/media/images/contact.png' %}" alt="Contact" class="contact_image" />
+            </div>
+            <div style="width:100%">
+                <form class='form'>
+                    <input type="text" placeholder="Full name" />
+                    <input type="Email" placeholder="email" />
+                    <select>
+                      <option value=''>--Select--</option>
+                    </select>
+                    <textarea class='textArea' placeholder="Project descripton/message" cols="30" rows="10" ></textarea>
+                    <button style="background:cornflowerblue;width: 100%;padding: 5px;margin: 10px 0px;">Submit</button>
+                  </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}
