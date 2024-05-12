@@ -11,8 +11,8 @@ class MessagesDto:
             raise ValueError("Message cannot be null, None, or empty")
         if not email:
             raise ValueError("Email cannot be null, None, or empty")
-        if not phone:
-            raise ValueError("Phone cannot be null, None, or empty")
+        # if not phone:
+        #     raise ValueError("Phone cannot be null, None, or empty")
         if not contact_option:
             raise ValueError("Contact option cannot be null, None, or empty")
 
@@ -26,11 +26,11 @@ class MessagesDto:
     def from_json(cls, json_str: str) -> Type['MessagesDto']:
         '''Returns MessagesDto object from json string'''
         json_data: dict = json.loads(json_str)
-        name = json_data.get('name')
+        name = json_data.get('fullname')
         message = json_data.get('message')
         email = json_data.get('email')
         phone = json_data.get('phone')
-        contact_option = json_data.get('contact_option')
+        contact_option = json_data.get('purpose')
 
         if not name:
             raise ValueError("Name cannot be null, None, or empty")
@@ -38,8 +38,8 @@ class MessagesDto:
             raise ValueError("Message cannot be null, None, or empty")
         if not email:
             raise ValueError("Email cannot be null, None, or empty")
-        if not phone:
-            raise ValueError("Phone cannot be null, None, or empty")
+        # if not phone:
+        #     raise ValueError("Phone cannot be null, None, or empty")
         if not contact_option:
             raise ValueError("Contact option cannot be null, None, or empty")
 

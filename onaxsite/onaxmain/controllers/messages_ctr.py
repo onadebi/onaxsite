@@ -11,6 +11,16 @@ def contact_options(request: HttpRequest):
     contact_svc = MessagesService().get_contact_options();
     return JsonResponse(contact_svc,safe=False, status=200 if contact_svc else 404);
 
+def submit_contact(request: HttpRequest):
+    if request.method == 'POST':
+        contactObj: dict = request.body.decode('utf-8'); 
+        isSaved = MessagesService().add_new_message(MessagesDto.from_json(contactObj));
+        return JsonResponse({'message':'successful', 'isSuccessful': True}) if isSaved else JsonResponse({'message':'Message not sent.', 'isSuccessful': False});
+    else:
+        # Handle other HTTP methods (GET, PUT, DELETE, etc.) if necessary
+        return JsonResponse({'error': 'Method not allowed'}, status=405)
+
+
 
 def vote(request):
     submission = request.POST.get("contact_form", None);
@@ -33,6 +43,7 @@ def vote(request):
 
 #region Controller URL Patterns
 contact_urlpatterns=[
-    path("contact-options",contact_options, name="contact_options")
+    path("contact-options",contact_options, name="contact_options"),
+    path("submit-contact",submit_contact, name="submit_contact")
 ]
 #endregion

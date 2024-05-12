@@ -11,16 +11,21 @@
                     <img src="{% static 'onaxmain/media/images/contact.png' %}" alt="Contact" class="contact_image" />
             </div>
             <div style="width:100%">
-                <form class='form'>
-                    <input type="text" placeholder="Full name" />
-                    <input type="Email" placeholder="email" />
-                    <select>
+                <form class='form' id="frmContact">
+                    {% csrf_token %}
+                    <input type="text" placeholder="Full name" id="fullname" name="fullname" required />
+                    <input type="Email" placeholder="email" id="email" name="email" required />
+                    <select id="purpose" name="purpose">
                       <option value=''>--Select--</option>
                     </select>
-                    <textarea class='textArea' placeholder="Project descripton/message" cols="30" rows="10" ></textarea>
-                    <button style="background:cornflowerblue;width: 100%;padding: 5px;margin: 10px 0px;">Submit</button>
-                  </form>
+                    <textarea id="message" name="message" class='textArea' placeholder="Project descripton/message" cols="30" rows="10" required ></textarea>
+                    <button id="btnSubmit" style="background:cornflowerblue;width: 100%;padding: 5px;margin: 10px 0px;">Submit</button>
+                </form>
             </div>
         </div>
     </div>
+
+    {% block scripts%}
+    <script type="text/javascript" src="{%static 'onaxmain/js/contact.js' %}" defer />
+    {% endblock%}
 {% endblock %}

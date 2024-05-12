@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.http import HttpResponse, HttpRequest, JsonResponse;
+from rest_framework import viewsets
+
+from onaxmain.models.ContactOptions import ContactOptions, ContactOptionsSerializer
 
 # Create your views here.
 def index(request: HttpRequest):
@@ -21,4 +24,12 @@ def portfolio(request: HttpRequest):
 def contact(request: HttpRequest):
     context: dict=  {'title': 'Get in touch with us'};
     return render(request, "onaxmain/contact.html",context)
+
+class ContactOptionsViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = ContactOptions.objects.all().order_by('option_name');
+    serializer_class = ContactOptionsSerializer
+
 
