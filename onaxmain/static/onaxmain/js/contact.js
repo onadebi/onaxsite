@@ -1,5 +1,5 @@
 // Reference: SweetAlert - https://unpkg.com/sweetalert/dist/sweetalert.min.js
-const isDev = true;
+const isDev = false;
 const BASE_URL = isDev ? 'http://localhost:8000/' : 'https://onaxsys.com/';
 window.onload =async ()=>{
     const allContactReasons = await fetchEnquiryPurpose();
