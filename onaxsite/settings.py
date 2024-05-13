@@ -29,7 +29,7 @@ SECRET_KEY = config('DJANGO_SECRET')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DJANGO_DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.onaxsys.com','www.onaxsys.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.onaxsys.com','www.onaxsys.com','https://www.onaxsys.com']
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
