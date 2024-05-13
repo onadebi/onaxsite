@@ -1,4 +1,3 @@
-// Reference: SweetAlert - https://unpkg.com/sweetalert/dist/sweetalert.min.js
 const isDev = false;
 const BASE_URL = isDev ? 'http://localhost:8000/' : 'https://www.onaxsys.com/';
 window.onload =async ()=>{
