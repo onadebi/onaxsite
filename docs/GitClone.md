@@ -41,3 +41,31 @@ Source: Conversation with Bing, 5/12/2024
 (6) undefined. https://github.com/Wachira11ke/Delftscopetech.git.
 (7) undefined. https://github.com/Wachira11ke/Delftscopetech.
 (8) undefined. https://myrepo.com/git.git.
+
+=========================================
+## To proceed and overwrite the local files with the incoming changes, you have a few options:
+
+1. **Commit Your Changes**: If you want to keep your local changes, you should commit them before merging. Use the following commands:
+   ```bash
+   git add .
+   git commit -m "Your commit message"
+   ```
+
+2. **Stash Your Changes**: If you're not ready to commit your changes but want to temporarily save them, you can stash them. Stashing takes your modified tracked files and saves them on a stack of unfinished changes that you can reapply at any time. Use the following command:
+   ```bash
+   git stash
+   ```
+
+   After stashing your changes, you can proceed with the merge.
+
+3. **Discard Your Changes**: If you don't want to keep your local changes and simply want to overwrite them with the incoming changes, you can discard them. Use the following command:
+   ```bash
+   git checkout -- <file_path>
+   ```
+
+   Replace `<file_path>` with the path to the file you want to overwrite. If you want to discard changes in all files, you can use:
+   ```bash
+   git checkout -- .
+   ```
+
+Choose the option that best fits your situation and proceed accordingly.
