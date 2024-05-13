@@ -5,8 +5,8 @@
 
 
 #Onadebi defined
-onaxsite/bin/
-onaxsite/staticfiles/
+bin/
+staticfiles/
 # dotenv files
 .env
 

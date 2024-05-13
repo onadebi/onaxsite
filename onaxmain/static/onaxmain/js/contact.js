@@ -1,5 +1,5 @@
 // Reference: SweetAlert - https://unpkg.com/sweetalert/dist/sweetalert.min.js
-const isDev = false;
+const isDev = true;
 const BASE_URL = isDev ? 'http://localhost:8000/' : 'https://onaxsys.com/';
 window.onload =async ()=>{
     const allContactReasons = await fetchEnquiryPurpose();
@@ -82,7 +82,6 @@ const fetchEnquiryPurpose = async ()=>{
     if(response.ok){
         const allContactInfo = await response.json();
         purposeData.push(...allContactInfo);
-        console.log(purposeData)
     }else{
         alert('Unable to retrieve data from the server. Kindly refresh your browser.');
         console.log(JSON.stringify(response))
