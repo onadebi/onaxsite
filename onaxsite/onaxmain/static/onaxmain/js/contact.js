@@ -1,5 +1,6 @@
 // Reference: SweetAlert - https://unpkg.com/sweetalert/dist/sweetalert.min.js
-
+const isDev = false;
+const BASE_URL = isDev ? 'http://localhost:8000/' : 'https://onaxsys.com/';
 window.onload =async ()=>{
     const allContactReasons = await fetchEnquiryPurpose();
     const purposeSelector = document.querySelector('#purpose');
@@ -39,7 +40,7 @@ form.addEventListener('submit', async function(event) {
         if(display){
             const data = {'contactObj':formData};
             console.log(JSON.stringify(data),formData);
-            fetch('http://localhost:8000/api/messages/submit-contact', {
+            fetch(`${BASE_URL}api/messages/submit-contact`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -77,7 +78,7 @@ form.addEventListener('submit', async function(event) {
 //#region HELPER Functions
 const fetchEnquiryPurpose = async ()=>{
     let purposeData = [];
-    const response = await fetch('http://localhost:8000/api/messages/contact-options');
+    const response = await fetch(`${BASE_URL}api/messages/contact-options`);
     if(response.ok){
         const allContactInfo = await response.json();
         purposeData.push(...allContactInfo);
