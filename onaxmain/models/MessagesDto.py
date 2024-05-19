@@ -50,3 +50,13 @@ class MessagesDto:
             phone=phone,
             contact_option=contact_option
         )
+    
+    @classmethod
+    def to_dict(self):
+        return {
+            'name': self.name,
+            'message': self.message,
+            'email': self.email,
+            'phone': self.phone,
+            'contact_option': self.contact_option  # Adjust as needed for correct serialization
+        }

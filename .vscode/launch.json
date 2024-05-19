@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Debugger: Onaxsite Django app",
+            "name": "Debug: Onaxsite Django app",
             "type": "debugpy",
             "request": "launch",
             "args": [

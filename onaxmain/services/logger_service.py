@@ -1,7 +1,4 @@
-
-
-import logging
-
+import logging;
 
 class LoggerService:
     def __init__(self):
@@ -14,4 +11,5 @@ class LoggerService:
 
     def log(self, message: str):
         """Logs the message to the log file"""
+        print(str(message))
         self._logger.info(message)
