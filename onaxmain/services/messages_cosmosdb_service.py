@@ -13,7 +13,7 @@ T = TypeVar('T', bound=MessagesDto)
 class MessagesCosmosDbService:
     '''Service class for Messages operations on CosmosDB'''
     def __init__(self, db=None):
-        self.dbCon = DbConfig(dbName=db, containerName='Messages');
+        self.dbCon = DbConfig(dbName=db, containerName='messages');
 
 
     def get_items(self, query:str, params: dict)-> GenResponse[List[T]]:
@@ -39,10 +39,12 @@ class MessagesCosmosDbService:
         objResp = self.dbCon.getContainer().query_items(query=query, parameters=params, enable_cross_partition_query=True)
         return list(objResp);
 
-    def add_messages(self, messages: list[MessagesDto]) -> bool:
+    def add_messages(self, messages: list[MessagesDto], userId: str) -> bool:
         try:
             for message in messages:
-                self.dbCon.getContainer().create_item(body=message.to_dict())
+                messade_dict: dict = message.to_dict()
+                messade_dict["id"] = str(userId)
+                self.dbCon.getContainer().create_item(body=messade_dict)
             return True
         except exceptions.CosmosHttpResponseError as e:
             print(f"Error in DbConfig.add_messages: {str(e)}")

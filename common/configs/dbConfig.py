@@ -26,7 +26,7 @@ class DbConfig:
         if containerName is None:
             self.container = self.db.get_container_client(COSMOS_CONTAINER_NAME)
         else:
-            self.container = self.db.get_container_client(containerName)
+            self.container = self.db.get_container_client(containerName.lower())
 
     def getContainer(self) -> ContainerProxy:
         """Returns the container object, which is of type :ContainerProxy, from azure.cosmos package"""

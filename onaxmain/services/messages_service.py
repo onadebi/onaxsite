@@ -35,7 +35,7 @@ class MessagesService:
             try:
                 logger.log(f"===Saving message of userId: {userId} to cosmosdb===");
                 messsage_service = MessagesCosmosDbService();
-                result = messsage_service.add_messages([message_dto]);
+                result = messsage_service.add_messages([message_dto], userId);
                 if result:
                     logger.log(f"===Message of userId: {userId} saved to cosmosdb===");
                 else:
