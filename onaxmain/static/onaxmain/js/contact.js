@@ -1,5 +1,5 @@
 const isDev = true;
-const BASE_URL = isDev ? 'http://localhost:8000/' : 'https://www.onaxsys.com/';
+const BASE_URL = isDev ? 'http://localhost:8000/' : 'https://onaxsys.com/';
 window.onload =async ()=>{
     const allContactReasons = await fetchEnquiryPurpose();
     const purposeSelector = document.querySelector('#purpose');

@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path;
 from decouple import config;
 import os;
+import re;
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +30,32 @@ SECRET_KEY = config('DJANGO_SECRET')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DJANGO_DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.onaxsys.com','www.onaxsys.com','https://www.onaxsys.com']
+# CORS_ALLOW_ALL_ORIGINS = True
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://onaxsys.com','onaxsys.com','.onaxsys.com','www.onaxsys.com','https://www.onaxsys.com','*']
+CORS_ALLOWED_ORIGINS = ['http://localhost', 'http://127.0.0.1', 'https://onaxsys.com','https://onaxsys.com','https://www.onaxsys.com']
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://\w+\.onaxsys\.com$",  # Allows all subdomains of example.com
+]
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
@@ -41,6 +67,7 @@ REST_FRAMEWORK = {
 INSTALLED_APPS = [
     "poll.apps.PollConfig", # This is the app we created
     # "onaxmain", # This is the app we created
+    'corsheaders',
     'onaxmain.apps.OnaxmainConfig', # This is the app we created
     'django.contrib.admin',
     'django.contrib.auth',
@@ -53,6 +80,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
