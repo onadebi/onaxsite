@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{42196d1c-59ed-4a0e-b815-3d5199397e7b}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <InterpreterId>MSBuild|venv|$(MSBuildProjectFullPath)</InterpreterId>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <DjangoSettingsModule>onaxsite.settings</DjangoSettingsModule>
+    <TestFramework>Pytest</TestFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="obj\Any CPU\Debug\onaxsite.pyproj.FileListAbsolute.txt" />
+    <Content Include="onaxmain\static\onaxmain\js\app.js" />
+    <Content Include="onaxmain\static\onaxmain\js\contact.js" />
+    <Content Include="onaxmain\static\onaxmain\media\favicon.ico" />
+    <Content Include="onaxmain\static\onaxmain\media\images\blog-1.jpg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\blog-2.jpg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\blog-3.png" />
+    <Content Include="onaxmain\static\onaxmain\media\images\blog-4.png" />
+    <Content Include="onaxmain\static\onaxmain\media\images\cloud-wireless-icon.svg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\contact.png" />
+    <Content Include="onaxmain\static\onaxmain\media\images\develop-icon.svg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\feature-banner.png" />
+    <Content Include="onaxmain\static\onaxmain\media\images\hero-banner.png" />
+    <Content Include="onaxmain\static\onaxmain\media\images\insta-post-1.jpg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\insta-post-2.jpg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\insta-post-3.jpg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\insta-post-4.jpg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\insta-post-5.jpg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\insta-post-6.jpg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\newsletter-banner.png" />
+    <Content Include="onaxmain\static\onaxmain\media\images\newsletter-bg.jpg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\onadebi.png" />
+    <Content Include="onaxmain\static\onaxmain\media\images\onadebi.svg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\onaxsys.svg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\one.png" />
+    <Content Include="onaxmain\static\onaxmain\media\images\one.svg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\project-1.jpg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\project-2.jpg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\project-3.jpg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\project-4.jpg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\project-5.jpg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\refine-icon.svg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\search-icon.svg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\service-icon-1.png" />
+    <Content Include="onaxmain\static\onaxmain\media\images\service-icon-2.png" />
+    <Content Include="onaxmain\static\onaxmain\media\images\service-icon-3.png" />
+    <Content Include="onaxmain\static\onaxmain\media\images\service-icon-4.png" />
+    <Content Include="onaxmain\static\onaxmain\media\images\service-icon-5.png" />
+    <Content Include="onaxmain\static\onaxmain\media\images\service-icon-6.png" />
+    <Content Include="onaxmain\static\onaxmain\media\images\service-icon-7.png" />
+    <Content Include="onaxmain\static\onaxmain\media\images\three.png" />
+    <Content Include="onaxmain\static\onaxmain\media\images\three.svg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\two.png" />
+    <Content Include="onaxmain\static\onaxmain\media\images\two.svg" />
+    <Content Include="onaxmain\static\onaxmain\media\images\web-icon.svg" />
+    <Content Include="onaxmain\static\onaxmain\styles\home.css" />
+    <Content Include="onaxmain\static\onaxmain\styles\layout.css" />
+    <Content Include="onaxmain\templates\onaxmain\about.html" />
+    <Content Include="onaxmain\templates\onaxmain\contact.html" />
+    <Content Include="onaxmain\templates\onaxmain\index.html" />
+    <Content Include="onaxmain\templates\onaxmain\layout.html" />
+    <Content Include="onaxmain\templates\onaxmain\portfolio.html" />
+    <Content Include="poll\templates\poll\detail.html" />
+    <Content Include="poll\templates\poll\index.html" />
+    <Content Include="poll\templates\poll\results.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="staticfiles\admin\css\autocomplete.css" />
+    <Content Include="staticfiles\admin\css\base.css" />
+    <Content Include="staticfiles\admin\css\changelists.css" />
+    <Content Include="staticfiles\admin\css\dark_mode.css" />
+    <Content Include="staticfiles\admin\css\dashboard.css" />
+    <Content Include="staticfiles\admin\css\forms.css" />
+    <Content Include="staticfiles\admin\css\login.css" />
+    <Content Include="staticfiles\admin\css\nav_sidebar.css" />
+    <Content Include="staticfiles\admin\css\responsive.css" />
+    <Content Include="staticfiles\admin\css\responsive_rtl.css" />
+    <Content Include="staticfiles\admin\css\rtl.css" />
+    <Content Include="staticfiles\admin\css\vendor\select2\select2.css" />
+    <Content Include="staticfiles\admin\css\vendor\select2\select2.min.css" />
+    <Content Include="staticfiles\admin\css\widgets.css" />
+    <Content Include="staticfiles\admin\img\calendar-icons.svg" />
+    <Content Include="staticfiles\admin\img\gis\move_vertex_off.svg" />
+    <Content Include="staticfiles\admin\img\gis\move_vertex_on.svg" />
+    <Content Include="staticfiles\admin\img\icon-addlink.svg" />
+    <Content Include="staticfiles\admin\img\icon-alert.svg" />
+    <Content Include="staticfiles\admin\img\icon-calendar.svg" />
+    <Content Include="staticfiles\admin\img\icon-changelink.svg" />
+    <Content Include="staticfiles\admin\img\icon-clock.svg" />
+    <Content Include="staticfiles\admin\img\icon-deletelink.svg" />
+    <Content Include="staticfiles\admin\img\icon-hidelink.svg" />
+    <Content Include="staticfiles\admin\img\icon-no.svg" />
+    <Content Include="staticfiles\admin\img\icon-unknown-alt.svg" />
+    <Content Include="staticfiles\admin\img\icon-unknown.svg" />
+    <Content Include="staticfiles\admin\img\icon-viewlink.svg" />
+    <Content Include="staticfiles\admin\img\icon-yes.svg" />
+    <Content Include="staticfiles\admin\img\inline-delete.svg" />
+    <Content Include="staticfiles\admin\img\README.txt" />
+    <Content Include="staticfiles\admin\img\search.svg" />
+    <Content Include="staticfiles\admin\img\selector-icons.svg" />
+    <Content Include="staticfiles\admin\img\sorting-icons.svg" />
+    <Content Include="staticfiles\admin\img\tooltag-add.svg" />
+    <Content Include="staticfiles\admin\img\tooltag-arrowright.svg" />
+    <Content Include="staticfiles\admin\js\actions.js" />
+    <Content Include="staticfiles\admin\js\admin\DateTimeShortcuts.js" />
+    <Content Include="staticfiles\admin\js\admin\RelatedObjectLookups.js" />
+    <Content Include="staticfiles\admin\js\autocomplete.js" />
+    <Content Include="staticfiles\admin\js\calendar.js" />
+    <Content Include="staticfiles\admin\js\cancel.js" />
+    <Content Include="staticfiles\admin\js\change_form.js" />
+    <Content Include="staticfiles\admin\js\collapse.js" />
+    <Content Include="staticfiles\admin\js\core.js" />
+    <Content Include="staticfiles\admin\js\filters.js" />
+    <Content Include="staticfiles\admin\js\inlines.js" />
+    <Content Include="staticfiles\admin\js\jquery.init.js" />
+    <Content Include="staticfiles\admin\js\nav_sidebar.js" />
+    <Content Include="staticfiles\admin\js\popup_response.js" />
+    <Content Include="staticfiles\admin\js\prepopulate.js" />
+    <Content Include="staticfiles\admin\js\prepopulate_init.js" />
+    <Content Include="staticfiles\admin\js\SelectBox.js" />
+    <Content Include="staticfiles\admin\js\SelectFilter2.js" />
+    <Content Include="staticfiles\admin\js\theme.js" />
+    <Content Include="staticfiles\admin\js\urlify.js" />
+    <Content Include="staticfiles\admin\js\vendor\jquery\jquery.js" />
+    <Content Include="staticfiles\admin\js\vendor\jquery\jquery.min.js" />
+    <Content Include="staticfiles\admin\js\vendor\jquery\LICENSE.txt" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\af.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\ar.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\az.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\bg.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\bn.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\bs.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\ca.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\cs.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\da.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\de.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\dsb.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\el.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\en.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\es.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\et.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\eu.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\fa.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\fi.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\fr.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\gl.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\he.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\hi.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\hr.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\hsb.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\hu.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\hy.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\id.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\is.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\it.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\ja.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\ka.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\km.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\ko.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\lt.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\lv.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\mk.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\ms.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\nb.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\ne.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\nl.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\pl.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\ps.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\pt-BR.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\pt.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\ro.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\ru.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\sk.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\sl.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\sq.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\sr-Cyrl.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\sr.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\sv.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\th.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\tk.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\tr.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\uk.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\vi.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\zh-CN.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\i18n\zh-TW.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\select2.full.js" />
+    <Content Include="staticfiles\admin\js\vendor\select2\select2.full.min.js" />
+    <Content Include="staticfiles\admin\js\vendor\xregexp\LICENSE.txt" />
+    <Content Include="staticfiles\admin\js\vendor\xregexp\xregexp.js" />
+    <Content Include="staticfiles\admin\js\vendor\xregexp\xregexp.min.js" />
+    <Content Include="staticfiles\onaxmain\js\app.js" />
+    <Content Include="staticfiles\onaxmain\js\contact.js" />
+    <Content Include="staticfiles\onaxmain\media\favicon.ico" />
+    <Content Include="staticfiles\onaxmain\media\images\blog-1.jpg" />
+    <Content Include="staticfiles\onaxmain\media\images\blog-2.jpg" />
+    <Content Include="staticfiles\onaxmain\media\images\blog-3.png" />
+    <Content Include="staticfiles\onaxmain\media\images\blog-4.png" />
+    <Content Include="staticfiles\onaxmain\media\images\cloud-wireless-icon.svg" />
+    <Content Include="staticfiles\onaxmain\media\images\contact.png" />
+    <Content Include="staticfiles\onaxmain\media\images\develop-icon.svg" />
+    <Content Include="staticfiles\onaxmain\media\images\feature-banner.png" />
+    <Content Include="staticfiles\onaxmain\media\images\hero-banner.png" />
+    <Content Include="staticfiles\onaxmain\media\images\insta-post-1.jpg" />
+    <Content Include="staticfiles\onaxmain\media\images\insta-post-2.jpg" />
+    <Content Include="staticfiles\onaxmain\media\images\insta-post-3.jpg" />
+    <Content Include="staticfiles\onaxmain\media\images\insta-post-4.jpg" />
+    <Content Include="staticfiles\onaxmain\media\images\insta-post-5.jpg" />
+    <Content Include="staticfiles\onaxmain\media\images\insta-post-6.jpg" />
+    <Content Include="staticfiles\onaxmain\media\images\newsletter-banner.png" />
+    <Content Include="staticfiles\onaxmain\media\images\newsletter-bg.jpg" />
+    <Content Include="staticfiles\onaxmain\media\images\onadebi.png" />
+    <Content Include="staticfiles\onaxmain\media\images\onadebi.svg" />
+    <Content Include="staticfiles\onaxmain\media\images\onaxsys.svg" />
+    <Content Include="staticfiles\onaxmain\media\images\one.png" />
+    <Content Include="staticfiles\onaxmain\media\images\one.svg" />
+    <Content Include="staticfiles\onaxmain\media\images\project-1.jpg" />
+    <Content Include="staticfiles\onaxmain\media\images\project-2.jpg" />
+    <Content Include="staticfiles\onaxmain\media\images\project-3.jpg" />
+    <Content Include="staticfiles\onaxmain\media\images\project-4.jpg" />
+    <Content Include="staticfiles\onaxmain\media\images\project-5.jpg" />
+    <Content Include="staticfiles\onaxmain\media\images\refine-icon.svg" />
+    <Content Include="staticfiles\onaxmain\media\images\search-icon.svg" />
+    <Content Include="staticfiles\onaxmain\media\images\service-icon-1.png" />
+    <Content Include="staticfiles\onaxmain\media\images\service-icon-2.png" />
+    <Content Include="staticfiles\onaxmain\media\images\service-icon-3.png" />
+    <Content Include="staticfiles\onaxmain\media\images\service-icon-4.png" />
+    <Content Include="staticfiles\onaxmain\media\images\service-icon-5.png" />
+    <Content Include="staticfiles\onaxmain\media\images\service-icon-6.png" />
+    <Content Include="staticfiles\onaxmain\media\images\service-icon-7.png" />
+    <Content Include="staticfiles\onaxmain\media\images\three.png" />
+    <Content Include="staticfiles\onaxmain\media\images\three.svg" />
+    <Content Include="staticfiles\onaxmain\media\images\two.png" />
+    <Content Include="staticfiles\onaxmain\media\images\two.svg" />
+    <Content Include="staticfiles\onaxmain\media\images\web-icon.svg" />
+    <Content Include="staticfiles\onaxmain\styles\home.css" />
+    <Content Include="staticfiles\onaxmain\styles\layout.css" />
+    <Content Include="staticfiles\rest_framework\css\bootstrap-theme.min.css" />
+    <Content Include="staticfiles\rest_framework\css\bootstrap-tweaks.css" />
+    <Content Include="staticfiles\rest_framework\css\bootstrap.min.css" />
+    <Content Include="staticfiles\rest_framework\css\default.css" />
+    <Content Include="staticfiles\rest_framework\css\font-awesome-4.0.3.css" />
+    <Content Include="staticfiles\rest_framework\css\prettify.css" />
+    <Content Include="staticfiles\rest_framework\docs\css\base.css" />
+    <Content Include="staticfiles\rest_framework\docs\css\highlight.css" />
+    <Content Include="staticfiles\rest_framework\docs\css\jquery.json-view.min.css" />
+    <Content Include="staticfiles\rest_framework\docs\img\favicon.ico" />
+    <Content Include="staticfiles\rest_framework\docs\img\grid.png" />
+    <Content Include="staticfiles\rest_framework\docs\js\api.js" />
+    <Content Include="staticfiles\rest_framework\docs\js\highlight.pack.js" />
+    <Content Include="staticfiles\rest_framework\docs\js\jquery.json-view.min.js" />
+    <Content Include="staticfiles\rest_framework\fonts\fontawesome-webfont.svg" />
+    <Content Include="staticfiles\rest_framework\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="staticfiles\rest_framework\img\glyphicons-halflings-white.png" />
+    <Content Include="staticfiles\rest_framework\img\glyphicons-halflings.png" />
+    <Content Include="staticfiles\rest_framework\img\grid.png" />
+    <Content Include="staticfiles\rest_framework\js\ajax-form.js" />
+    <Content Include="staticfiles\rest_framework\js\bootstrap.min.js" />
+    <Content Include="staticfiles\rest_framework\js\coreapi-0.1.1.js" />
+    <Content Include="staticfiles\rest_framework\js\csrf.js" />
+    <Content Include="staticfiles\rest_framework\js\default.js" />
+    <Content Include="staticfiles\rest_framework\js\jquery-3.7.1.min.js" />
+    <Content Include="staticfiles\rest_framework\js\load-ajax-form.js" />
+    <Content Include="staticfiles\rest_framework\js\prettify-min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bin\wfastcgi.py" />
+    <Compile Include="blog\admin.py" />
+    <Compile Include="blog\apps.py" />
+    <Compile Include="blog\migrations\0001_initial.py" />
+    <Compile Include="blog\migrations\__init__.py" />
+    <Compile Include="blog\models.py" />
+    <Compile Include="blog\models\Posts.py" />
+    <Compile Include="blog\models\__init__.py" />
+    <Compile Include="blog\tests.py" />
+    <Compile Include="blog\views.py" />
+    <Compile Include="blog\__init__.py" />
+    <Compile Include="common\configs\dbConfig.py" />
+    <Compile Include="common\GenResponse.py" />
+    <Compile Include="common\models\base_model.py" />
+    <Compile Include="common\models\__init__.py" />
+    <Compile Include="common\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="onaxmain\admin.py" />
+    <Compile Include="onaxmain\apps.py" />
+    <Compile Include="onaxmain\controllers\messages_ctr.py" />
+    <Compile Include="onaxmain\controllers\__init__.py" />
+    <Compile Include="onaxmain\migrations\0001_initial.py" />
+    <Compile Include="onaxmain\migrations\0002_alter_portfoliosubcategory_table.py" />
+    <Compile Include="onaxmain\migrations\0003_alter_portfoliosubcategory_category_id.py" />
+    <Compile Include="onaxmain\migrations\0004_alter_portfoliocategory_description_and_more.py" />
+    <Compile Include="onaxmain\migrations\0005_contactoptions.py" />
+    <Compile Include="onaxmain\migrations\0006_messages.py" />
+    <Compile Include="onaxmain\migrations\0007_contactmessages_delete_messages.py" />
+    <Compile Include="onaxmain\migrations\__init__.py" />
+    <Compile Include="onaxmain\models.py" />
+    <Compile Include="onaxmain\models\ContactOptions.py" />
+    <Compile Include="onaxmain\models\MessagesDto.py" />
+    <Compile Include="onaxmain\models\Person.py" />
+    <Compile Include="onaxmain\models\PortfolioCategory.py" />
+    <Compile Include="onaxmain\models\__init__.py" />
+    <Compile Include="onaxmain\services\logger_service.py" />
+    <Compile Include="onaxmain\services\messages_cosmosdb_service.py" />
+    <Compile Include="onaxmain\services\messages_service.py" />
+    <Compile Include="onaxmain\services\__init__.py" />
+    <Compile Include="onaxmain\tests.py" />
+    <Compile Include="onaxmain\urls_controller.py" />
+    <Compile Include="onaxmain\views.py" />
+    <Compile Include="onaxmain\__init__.py" />
+    <Compile Include="onaxsite\asgi.py" />
+    <Compile Include="onaxsite\settings.py" />
+    <Compile Include="onaxsite\urls.py" />
+    <Compile Include="onaxsite\wsgi.py" />
+    <Compile Include="onaxsite\__init__.py" />
+    <Compile Include="poll\admin.py" />
+    <Compile Include="poll\apps.py" />
+    <Compile Include="poll\migrations\0001_initial.py" />
+    <Compile Include="poll\migrations\0002_alter_question_pub_date.py" />
+    <Compile Include="poll\migrations\0003_alter_question_pub_date.py" />
+    <Compile Include="poll\migrations\0004_alter_question_pub_date.py" />
+    <Compile Include="poll\migrations\0005_alter_question_pub_date.py" />
+    <Compile Include="poll\migrations\__init__.py" />
+    <Compile Include="poll\models.py" />
+    <Compile Include="poll\tests.py" />
+    <Compile Include="poll\urls-controller.py" />
+    <Compile Include="poll\views.py" />
+    <Compile Include="poll\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin" />
+    <Folder Include="blog" />
+    <Folder Include="blog\migrations" />
+    <Folder Include="blog\models" />
+    <Folder Include="common" />
+    <Folder Include="common\configs" />
+    <Folder Include="common\models" />
+    <Folder Include="obj\" />
+    <Folder Include="obj\Any CPU\" />
+    <Folder Include="obj\Any CPU\Debug" />
+    <Folder Include="onaxmain" />
+    <Folder Include="onaxmain\controllers" />
+    <Folder Include="onaxmain\migrations" />
+    <Folder Include="onaxmain\models" />
+    <Folder Include="onaxmain\services" />
+    <Folder Include="onaxmain\static\" />
+    <Folder Include="onaxmain\static\onaxmain\" />
+    <Folder Include="onaxmain\static\onaxmain\js" />
+    <Folder Include="onaxmain\static\onaxmain\media" />
+    <Folder Include="onaxmain\static\onaxmain\media\images" />
+    <Folder Include="onaxmain\static\onaxmain\styles" />
+    <Folder Include="onaxmain\templates\" />
+    <Folder Include="onaxmain\templates\onaxmain" />
+    <Folder Include="onaxsite" />
+    <Folder Include="poll" />
+    <Folder Include="poll\migrations" />
+    <Folder Include="poll\templates\" />
+    <Folder Include="poll\templates\poll" />
+    <Folder Include="staticfiles\" />
+    <Folder Include="staticfiles\admin\" />
+    <Folder Include="staticfiles\admin\css" />
+    <Folder Include="staticfiles\admin\css\vendor\" />
+    <Folder Include="staticfiles\admin\css\vendor\select2" />
+    <Folder Include="staticfiles\admin\img" />
+    <Folder Include="staticfiles\admin\img\gis" />
+    <Folder Include="staticfiles\admin\js" />
+    <Folder Include="staticfiles\admin\js\admin" />
+    <Folder Include="staticfiles\admin\js\vendor\" />
+    <Folder Include="staticfiles\admin\js\vendor\jquery" />
+    <Folder Include="staticfiles\admin\js\vendor\select2" />
+    <Folder Include="staticfiles\admin\js\vendor\select2\i18n" />
+    <Folder Include="staticfiles\admin\js\vendor\xregexp" />
+    <Folder Include="staticfiles\onaxmain\" />
+    <Folder Include="staticfiles\onaxmain\js" />
+    <Folder Include="staticfiles\onaxmain\media" />
+    <Folder Include="staticfiles\onaxmain\media\images" />
+    <Folder Include="staticfiles\onaxmain\styles" />
+    <Folder Include="staticfiles\rest_framework\" />
+    <Folder Include="staticfiles\rest_framework\css" />
+    <Folder Include="staticfiles\rest_framework\docs\" />
+    <Folder Include="staticfiles\rest_framework\docs\css" />
+    <Folder Include="staticfiles\rest_framework\docs\img" />
+    <Folder Include="staticfiles\rest_framework\docs\js" />
+    <Folder Include="staticfiles\rest_framework\fonts" />
+    <Folder Include="staticfiles\rest_framework\img" />
+    <Folder Include="staticfiles\rest_framework\js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="..\venv\">
+      <Id>venv</Id>
+      <Version>3.10</Version>
+      <Description>venv (Python 3.10 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

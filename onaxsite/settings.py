@@ -67,6 +67,8 @@ REST_FRAMEWORK = {
 INSTALLED_APPS = [
     "poll.apps.PollConfig", # This is the app we created
     # "onaxmain", # This is the app we created
+    'blog.apps.BlogConfig',
+    'common',
     'corsheaders',
     'onaxmain.apps.OnaxmainConfig', # This is the app we created
     'django.contrib.admin',
