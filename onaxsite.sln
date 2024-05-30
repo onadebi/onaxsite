@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "onaxsite", "onaxsite.pyproj", "{42196D1C-59ED-4A0E-B815-3D5199397E7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42196D1C-59ED-4A0E-B815-3D5199397E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42196D1C-59ED-4A0E-B815-3D5199397E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42196D1C-59ED-4A0E-B815-3D5199397E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42196D1C-59ED-4A0E-B815-3D5199397E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {477144A2-7C86-42C0-B027-EEB049AB5419}
+	EndGlobalSection
+EndGlobal

@@ -15,6 +15,7 @@
     <WebBrowserUrl>http://localhost</WebBrowserUrl>
     <DjangoSettingsModule>onaxsite.settings</DjangoSettingsModule>
     <TestFramework>Pytest</TestFramework>
+    <WebBrowserPort>8000</WebBrowserPort>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
