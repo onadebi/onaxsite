@@ -2,7 +2,7 @@ from django.http import JsonResponse, HttpRequest;
 from django.urls import path;
 from django.shortcuts import get_object_or_404;
 from onaxmain.services.messages_service import MessagesService;
-from onaxmain.services.logger_service import LoggerService as Logger;
+from common.helpers.logger_service import LoggerService as Logger;
 from onaxmain.models.MessagesDto import MessagesDto;
 
 logger = Logger();

@@ -2,7 +2,7 @@ from django.db.models import QuerySet
 from onaxmain.models.ContactOptions import ContactOptions
 from onaxmain.models import MessagesDto;
 from onaxmain.models.ContactOptions import ContactMessages;
-from onaxmain.services.logger_service import LoggerService as Logger
+from common.helpers.logger_service import LoggerService as Logger
 from onaxmain.services.messages_cosmosdb_service import MessagesCosmosDbService;
 
 logger = Logger();

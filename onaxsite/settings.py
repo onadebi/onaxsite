@@ -18,6 +18,7 @@ import re;
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+print(f"===========BASE_DIR: {BASE_DIR}=========")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -67,9 +68,9 @@ REST_FRAMEWORK = {
 INSTALLED_APPS = [
     "poll.apps.PollConfig", # This is the app we created
     # "onaxmain", # This is the app we created
-    'blog.apps.BlogConfig',
     'common',
     'corsheaders',
+    'blog.apps.BlogConfig',
     'onaxmain.apps.OnaxmainConfig', # This is the app we created
     'django.contrib.admin',
     'django.contrib.auth',
@@ -98,7 +99,10 @@ ROOT_URLCONF = 'onaxsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'onaxmain/templates/onaxmain')],
+        'DIRS': [
+                 os.path.join(BASE_DIR, 'onaxmain/templates/onaxmain'),
+                 os.path.join(BASE_DIR, 'common/templates/blog'),
+                 ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -177,10 +181,11 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",
-#     "/var/www/static/",
-# ]
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    BASE_DIR / "blog/static",
+    "/var/www/static/",
+]
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 

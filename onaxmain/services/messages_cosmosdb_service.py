@@ -1,5 +1,5 @@
 from azure.cosmos import exceptions
-from onaxmain.services.logger_service import LoggerService as Logger;
+from common.helpers.logger_service import LoggerService as Logger;
 from common.GenResponse import GenResponse;
 from common.configs.dbConfig import DbConfig;
 from typing import TypeVar,List
@@ -16,7 +16,7 @@ class MessagesCosmosDbService:
         self.dbCon = DbConfig(dbName=db, containerName='messages');
 
 
-    def get_items(self, query:str, params: dict)-> GenResponse[List[T]]:
+    def get_items(self, query:str, params: dict)-> GenResponse[List]:
         """Get items from the database using a query and parameters. Returns a GenResponse[List[T]] of items."""
         if not query:
             raise ValueError("The query parameter cannot be null or empty.")        

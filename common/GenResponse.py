@@ -1,20 +1,27 @@
-from typing import Generic, TypeVar
+from typing import Generic, Optional, TypeVar
 from enum import Enum
+from pydantic import BaseModel
 
-# Define an Enum for status
-class StatusEnum(Enum):
+# Define the StatusCodeEnum
+class StatusCodeEnum(Enum):
     OK = 200
-    ERROR = 500
-    # Add more status values as needed
+    BadRequest = 400
+    # Add other status codes as needed
 
+# Define the GenResponse class inheriting from BaseModel
 T = TypeVar('T')
 
-class GenResponse(Generic[T]):
-    def __init__(self, data: T, message: str, status: StatusEnum = StatusEnum.OK):
-        self.status = status
-        self.message = message
-        self.data = data
+class GenResponse(BaseModel, Generic[T]):
+    is_success: bool = False
+    data: Optional[T] = None
+    message: Optional[str] = None
+    error: Optional[str] = None
+    stat_code: int = StatusCodeEnum.OK.value
 
-    @classmethod
-    def success(cls, data: T, message: str, status: StatusEnum = StatusEnum.OK) -> 'GenResponse[T]':
-        return cls(data=data, message=message, status=status)
+    @staticmethod
+    def success(data: T, status_code: StatusCodeEnum = StatusCodeEnum.OK, message: Optional[str] = None) -> 'GenResponse[T]':
+        return GenResponse(is_success=True, data=data, message=message, stat_code=status_code.value)
+
+    @staticmethod
+    def failed(error: str, status_code: StatusCodeEnum = StatusCodeEnum.BadRequest) -> 'GenResponse[None]':
+        return GenResponse(is_success=False, error=error, stat_code=status_code.value)

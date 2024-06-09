@@ -19,6 +19,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('onaxmain.urls_controller')),
+    path('blog/', include('blog.urls_controller')),
     path('admin/', admin.site.urls),
     path("poll/", include("poll.urls-controller")), # This is the app we created
 ]

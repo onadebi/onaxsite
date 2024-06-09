@@ -1,0 +1,10 @@
+:root{
+    --section-padding: 100px;
+}
+
+.dvMain{
+    padding-block-start: calc(var(--section-padding) + 20px);
+}
+
+
+

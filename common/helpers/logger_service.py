@@ -14,3 +14,8 @@ class LoggerService:
         """Logs the message to the log file"""
         print(str(message))
         self._logger.info(message)
+
+    # def error(self, message: str):
+    #     """Logs the error message to the log file"""
+    #     print(str(message))
+    #     self._logger.error(message)

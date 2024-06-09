@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% comment %} {% extends 'blog.layout.html' %} {% endcomment %}
+{% load static %}
+{% block pagestyle %}
+<link rel="stylesheet" href="{% static 'blog/styles/home.css'%}">
+{% endblock %}
+{% block body %}
+    <div class="container dvMain">
+        <h1 style="text-align:center;">Blog</h1>
+        
+    </div>
+
+    {% block scripts%}
+    <script src="{%static 'blog/js/blog.js' %}" defer ></script>
+    {% endblock%}
+{% endblock %}
