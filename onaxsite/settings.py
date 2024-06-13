@@ -80,7 +80,19 @@ INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
     'django.contrib.staticfiles',
     'rest_framework',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
+
+CKEDITOR_BASEPATH = BASE_DIR / "staticfiles"
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_CONFIGS = {
+    "default": {
+        "removePlugins": "exportpdf",
+    }
+}
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -138,8 +150,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': config('DJANGO_DB_NAME'), # database name
         'USER': config('DJANGO_DB_USER'),
-        'PASSWORD': config('DJANGO_DB_PASSWORD'),
         'HOST': config('DJANGO_DB_HOST'),
+        'PASSWORD': os.getenv('DJANGO_DB_PASSWORD'),# config('DJANGO_DB_PASSWORD'),
         'PORT': config('DJANGO_DB_PORT'), 
     }
 }
@@ -182,9 +194,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    # BASE_DIR / "static",
     BASE_DIR / "blog/static",
-    "/var/www/static/",
+    # "/var/www/static/",
 ]
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

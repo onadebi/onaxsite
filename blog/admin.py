@@ -2,5 +2,10 @@ from django.contrib import admin
 
 from .models.Posts import Posts
 
-# Register your models here.
-admin.site.register([Posts]);
+models_list: list = [
+    Posts
+    ]
+
+
+
+admin.site.register(models_list);
