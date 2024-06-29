@@ -1,10 +1,78 @@
-:root{
-    --section-padding: 100px;
+:root {
+  --section-padding: 100px;
 }
 
-.dvMain{
-    padding-block-start: calc(var(--section-padding) + 20px);
+.dvMain {
+  padding-block-start: calc(var(--section-padding) + 20px);
+  min-height: calc(100vh - var(--section-padding));
 }
 
+.wrapper {
+  display: flex;
+  gap: 10px;
+}
 
+.dvPosts {
+  flex: 4;
+  background-color: #ececec;
+}
+.dvSidebar {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
+  .card {
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    overflow: hidden;
+    color: black;
+  }
+  .card-header {
+    background-color: #fff6f6;
+    padding: 10px;
+  }
+
+  .card-body {
+    padding: 5px 10px;
+    border-top: 1px solid #ececec;
+  }
+
+  .search-bar {
+    display: flex;
+    margin: 10px 2px;
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    overflow: hidden;
+    justify-content: center;
+
+    #searchText {
+      border: none;
+      outline: none;
+      padding: 5px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .ul-categories {
+    list-style: none;
+
+    li a {
+      text-decoration-color: cornflowerblue;
+      text-decoration: none;
+      transition: text-decoration-color 0.3s ease-in;
+    }
+  }
+
+  .ul-categories li a:hover {
+    text-decoration: underline;
+    text-decoration-color: cornflowerblue;
+  }
+}

@@ -5,6 +5,7 @@
 
 
 #Onadebi defined
+[Mm]igrations/
 bin/
 staticfiles/
 tmp/
