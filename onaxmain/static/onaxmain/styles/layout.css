@@ -143,6 +143,7 @@ body {
   color: var(--slate-gray);
   font-size: 1.6rem;
   line-height: 1.75;
+  margin:0px;
 }
 
 :focus-visible { outline-offset: 4px; }

@@ -11,6 +11,9 @@ class PostService:
 
     def get_all(self):
         return self.post_repository.get_all()
+    
+    def get_featured_post(self):
+        return self.post_repository.get_featured_post()
 
     # def get_by_id(self, id):
     #     return self.post_repository.get_by_id(id)

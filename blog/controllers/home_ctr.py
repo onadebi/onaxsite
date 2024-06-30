@@ -10,7 +10,8 @@ def index(request: HttpRequest):
     posts = PostService().get_all();
     context: dict={'title': 'Blog',
                    'description': 'Onaxsys Media Blog',
-                   "posts": posts};
+                   "posts": posts,
+                   "featured_post": PostService().get_featured_post()};
     logger.log(message=context)
     return render(request, "blog/index.html", context);
 

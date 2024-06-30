@@ -10,33 +10,57 @@
 .wrapper {
   display: flex;
   gap: 10px;
+  margin-bottom: 25px;
+}
+.card {
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  overflow: hidden;
+  color: black;
+}
+.card-header {
+  background-color: #fff6f6;
+  padding: 10px;
+}
+
+.card-body {
+  padding: 5px 10px;
+  border-top: 1px solid #ececec;
 }
 
 .dvPosts {
   flex: 4;
-  background-color: #ececec;
+  /* background-color: #ececec; */
 }
+
+.featured-post {
+  margin-bottom: 10px;
+  img {
+    max-width: 100%;
+  }
+}
+
+.dvPost {
+  margin-bottom: 10px;
+  flex: 1 0 calc(50% - 20px); /* Adjust 20px to account for any margin or padding */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  margin: 5px; /* Adjust as needed */
+  img {
+    max-width: 100%;
+  }
+}
+
+.paged-posts{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
 .dvSidebar {
   flex: 2;
   display: flex;
   flex-direction: column;
   gap: 10px;
-
-  .card {
-    border: 1px solid #ececec;
-    border-radius: 5px;
-    overflow: hidden;
-    color: black;
-  }
-  .card-header {
-    background-color: #fff6f6;
-    padding: 10px;
-  }
-
-  .card-body {
-    padding: 5px 10px;
-    border-top: 1px solid #ececec;
-  }
 
   .search-bar {
     display: flex;

@@ -9,15 +9,32 @@
         <h1>Blog</h1>
         <div class="wrapper">
             <div class="dvPosts">
-                {% for post in posts %}
-                <div class="dvPost">
-                    <img src="https://onaxsys.com/{{post.featured_image}}" alt="post image" style="width:850px; height: 350px;">
-                    <h2>{{post.post_title}}</h2>
-                    <p>{{post.post_content}}</p>
-                    <p>{{post.created_at}}</p>
-                    <a href="{% url 'blog:index'%}">Read more</a>
+                {% if featured_post %}
+                <div class="featured-post card">
+                    <img src="{% static 'media/images/'|add:featured_post.featured_image %}" alt="post image" >
+                    <div class="post-content" style="padding:10px;">
+                        <p>{{featured_post.created_at|date:"F d, Y"}}</p>
+                        <h2>{{featured_post.post_title}}</h2>
+                        <p>{{featured_post.post_summary}}</p>
+                        <a href="{% url 'blog:index'%}">Read more</a>
+                    </div>
                 </div>
-                {% endfor %}
+                {% endif %}
+
+                <div class="paged-posts">
+                    {% for post in posts %}
+                    <div class="dvPost card">
+                        <img src="{% static 'media/images/'|add:post.featured_image %}" alt="post image" >
+                        <div class="post-content" style="padding:10px;">
+                            <p>{{post.created_at|date:"F d, Y"}}</p>
+                            <h2>{{post.post_title}}</h2>
+                            <p>{{post.post_summary}}</p>
+                            <a href="{% url 'blog:index'%}">Read more</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
             </div>
             <div class="dvSidebar">
                 <div class="card">

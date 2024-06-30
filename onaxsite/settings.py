@@ -68,7 +68,7 @@ REST_FRAMEWORK = {
 INSTALLED_APPS = [
     "poll.apps.PollConfig", # This is the app we created
     # "onaxmain", # This is the app we created
-    'common',
+    'common.apps.CommonConfig',
     'corsheaders',
     'blog.apps.BlogConfig',
     'onaxmain.apps.OnaxmainConfig', # This is the app we created
@@ -195,7 +195,8 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_DIRS = [
     # BASE_DIR / "static",
-    os.path.join(BASE_DIR , "blog","static"),
+    # os.path.join(BASE_DIR , "blog","static"),
+    # os.path.join(BASE_DIR , "common","static"),
     # "/var/www/static/",
 ]
 # Default primary key field type
