@@ -1,6 +1,9 @@
 # from django.
 from django.db import models;
 from django.utils import timezone;
+from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField;
+
 import uuid;
 import base64
 
@@ -13,13 +16,16 @@ short_guid = encoded_guid.decode('utf-8').rstrip('=')
 
 class Posts(models.Model):
     id = models.AutoField(primary_key=True, db_column='id', name='id');
-    post_title: str = models.CharField(max_length=255, null=False, blank=False, unique=False);
-    post_content: str = models.TextField(max_length=1500, null=False, blank=False, default='');
-    post_summary: str = models.CharField(max_length=350, null=False, blank=False);
-    featured_image: str = models.CharField(max_length=255, null=True, blank=True, default='default_featured_image.jpg');
-    slug = models.SlugField(max_length=255, unique=True, null=False, blank=False);
+    post_title: str = models.CharField(max_length=255, null=False, blank=False, unique=False, verbose_name='Post Title');
+    # post_content: str = models.TextField(max_length=1500, null=False, blank=False, default='');
+    post_content = RichTextUploadingField(verbose_name='Post Content', default='---');
+    post_summary: str = models.CharField(max_length=350, null=False, blank=False, default='------');
+    # featured_image: str = models.CharField(max_length=255, null=True, blank=True, default='default_featured_image.jpg');
+    post_image = models.ImageField(upload_to='',max_length=255, null=True, blank=True,verbose_name='Post Image',default='default_featured_image.jpg');
+    slug = models.SlugField(max_length=255, unique=True, null=False, blank=False,default='------');
+    categories = models.CharField(max_length=255, choices=[('software-development', 'Software Development'), ('machine-learning-ai', 'Machine Learning/AI'), ('freebies', 'Freebies'), ('programming-languages', 'Programming Languages'), ('Tutorials', 'tutorials')], default='software-development');
 
-    created_at = models.DateTimeField(default=timezone.now);
+    created_at = models.DateTimeField(auto_now=True);
     updated_at = models.DateTimeField(auto_now=True);
     is_deleted = models.BooleanField(default=False);
     is_active = models.BooleanField(default=True);

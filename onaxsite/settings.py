@@ -16,7 +16,9 @@ import os;
 import re;
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 print(f"===========BASE_DIR: {BASE_DIR}=========")
 
@@ -84,14 +86,27 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
 ]
 
-CKEDITOR_BASEPATH = BASE_DIR / "staticfiles"
+CKEDITOR_JQUERY_URL = 'https://code.jquery.com/jquery-3.6.0.min.js'
+
+# CKEDITOR_BASEPATH = os.path.join(BASE_DIR,"static")
+# CKEDITOR_BASEPATH = os.path.join(BASE_DIR,"static")
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_IMAGE_BACKEND = "pillow"
 CKEDITOR_CONFIGS = {
-    "default": {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': '100%',
+        'extraPlugins': ','.join([
+            'uploadimage',  # the upload image feature
+            'table',
+            # additional plugins here
+        ]),
         "removePlugins": "exportpdf",
     }
 }
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'static', 'media')
 
 
 MIDDLEWARE = [
@@ -194,7 +209,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_DIRS = [
-    # BASE_DIR / "static",
+    # os.path.join(BASE_DIR, 'static'),
     # os.path.join(BASE_DIR , "blog","static"),
     # os.path.join(BASE_DIR , "common","static"),
     # "/var/www/static/",
