@@ -1,6 +1,5 @@
 from datetime import datetime
 from typing import Union
-
 from blog.models.Posts import Posts;
 from django.db.models import QuerySet;
 from common.helpers.logger_service import LoggerService as Logger;
@@ -12,7 +11,7 @@ class PostRepository:
     def __init__(self):
         pass;
     
-    def get_all(self):        
+    def get_all(self) -> list[Posts]| None:        
         """Returns list[ContactOptionsDao] of all active or None"""
         try:
             objResult: QuerySet[Posts] = Posts.objects.filter(is_active=True).values('id','post_title','post_content','created_at','updated_at','author','post_summary','slug','is_featured_post','post_image');
@@ -58,3 +57,25 @@ class PostRepository:
             logger.log(f"Error in PostRepository.get_featured_post: {str(e)}");
             featured_post = None;
         return featured_post;
+
+    def get_by_id(self, slug: str) -> Posts | None:
+        """Returns the post by slug or None"""
+        try:
+            objResult: Posts = Posts.objects.filter(slug=slug).values('id','post_title','post_content','created_at','updated_at','author','post_summary','slug','is_featured_post','post_image').last();
+            post = {
+                    'id' : int(objResult['id']),
+                    'post_title' : str(objResult['post_title']),
+                    'post_content' : str(objResult['post_content']),
+                    'created_at' : datetime.strptime(str(objResult['created_at']), "%Y-%m-%d %H:%M:%S.%f%z"),
+                    'updated_at' : datetime.strptime(str(objResult['updated_at']), "%Y-%m-%d %H:%M:%S.%f%z"),
+                    'author' : str(objResult['author']),
+                    # 'featured_image' : "850x350.png" if objResult['featured_image'] == "default_featured_image.jpg" else str(objResult['featured_image']),
+                    'post_image' : "700x350.png" if objResult['post_image'] == "default_featured_image.jpg" else str(objResult['post_image']),
+                    'post_summary' : str(objResult['post_summary']),
+                    'slug' : str(objResult['slug']),
+                    'is_featured_post' : bool(objResult['is_featured_post']),
+                }
+        except Exception as e:
+            logger.log(f"Error in PostRepository.get_by_id: {str(e)}");
+            post = None;
+        return post;

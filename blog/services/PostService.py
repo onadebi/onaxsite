@@ -15,8 +15,8 @@ class PostService:
     def get_featured_post(self):
         return self.post_repository.get_featured_post()
 
-    # def get_by_id(self, id):
-    #     return self.post_repository.get_by_id(id)
+    def get_by_id(self, slug: str):
+        return self.post_repository.get_by_id(slug)
 
     # def create(self, post):
     #     return self.post_repository.create(post)

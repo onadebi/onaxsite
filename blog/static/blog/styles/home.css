@@ -40,6 +40,16 @@
   }
 }
 
+.imageContainer {
+  width: 100%;
+}
+.imageContainer img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  display: block;
+}
+
 .dvPost {
   margin-bottom: 10px;
   flex: 1 0 calc(50% - 20px); /* Adjust 20px to account for any margin or padding */
@@ -47,6 +57,9 @@
   margin: 5px; /* Adjust as needed */
   img {
     max-width: 100%;
+    min-height: 250px;
+    max-height: 250px;
+    width: 100%;
   }
 }
 
@@ -98,5 +111,21 @@
   .ul-categories li a:hover {
     text-decoration: underline;
     text-decoration-color: cornflowerblue;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  /* .dvPosts {
+    flex: 1;
+  } */
+}
+
+@media (max-width: 576px){
+  .paged-posts{
+    display: block;
   }
 }

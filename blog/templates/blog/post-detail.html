@@ -9,35 +9,20 @@
         <h1>Blog</h1>
         <div class="wrapper">
             <div class="dvPosts">
-                {% if featured_post %}
+                {% if post %}
                 <div class="featured-post card">
                     <div class="imageContainer">
-                        <img src="{{ '/media/'|add:featured_post.post_image }}" alt="post image" >
+                        <img src="{{ '/media/'|add:post.post_image }}" alt="post image" >
                     </div>
                     <div class="post-content" style="padding:10px;">
-                        <p>{{featured_post.created_at|date:"F d, Y"}}</p>
-                        <h2>{{featured_post.post_title}}</h2>
-                        <p>{{featured_post.post_summary|safe}}</p>
-                        <a href="{{ '/posts/'|add:featured_post.slug }}">Read more</a>
+                        <p>{{post.created_at|date:"F d, Y"}}</p>
+                        <h2>{{post.post_title}}</h2>
+                        <p>{{post.post_content|safe}}</p>
+                        <br/>
+                        <a href="{% url 'posts:index'%}">All posts</a>
                     </div>
                 </div>
                 {% endif %}
-
-                <div class="paged-posts">
-                    {% for post in posts %}
-                    <div class="dvPost card">
-                        <div class="allPostsImgContainer">
-                            <img src="/media/{{ post.post_image }}" alt="post image" >
-                        </div>
-                        <div class="post-content" style="padding:10px;">
-                            <p>{{post.created_at|date:"F d, Y"}}</p>
-                            <h2>{{post.post_title}}</h2>
-                            <p>{{post.post_summary|safe}}</p>
-                            <a href="{{ '/posts/'|add:post.slug }}">Read more</a>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
 
             </div>
             <div class="dvSidebar">
